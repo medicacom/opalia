@@ -81,7 +81,8 @@ function ListeReleve() {
         sep: element.sep,
         oct: element.oct,
         nov: element.nov,
-        dec: element.dec
+        dec: element.dec,
+        na: 'N/A'
       };
       array.push(val);
     });
@@ -144,6 +145,7 @@ function ListeReleve() {
                         <ExcelColumn label="Nov" value="nov" />
                         <ExcelColumn label="Dec" value="dec" />
                         <ExcelColumn label="Total" value="total" />
+                        <ExcelColumn label="Date limite" value="na" />
                       </ExcelSheet>
                     </ExcelFile>
                   </Col>
@@ -220,6 +222,10 @@ function ListeReleve() {
                       Header: "Total",
                       accessor: "total",
                     },
+                    {
+                      Header: "Date limite",
+                      accessor: "na",
+                    }
                    
                   ]}
                   className="-striped -highlight primary-pagination"

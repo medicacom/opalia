@@ -104,10 +104,11 @@ function ReleveGro() {
               sep: table[i].sep,
               oct: table[i].oct,
               nov: table[i].nov,
-              dec: table[i].dec
+              dec: table[i].dec,
+              na: 'N/A'
             });
           } else {
-            produitexit.push('Code produit '+table[i].code);
+            produitexit.push('Code produit '+table[i].code+" \n\n/ \n\n");
             arrayBody.push({
               idProduit: null,
               designation: table[i].designation,
@@ -125,7 +126,8 @@ function ReleveGro() {
               sep: table[i].sep,
               oct: table[i].oct,
               nov: table[i].nov,
-              dec: table[i].dec
+              dec: table[i].dec,
+              na: 'N/A'
             });
           }
         }
@@ -468,6 +470,10 @@ function ReleveGro() {
                         {
                           Header: "Total",
                           accessor: "total",
+                        },
+                        {
+                          Header: "Date limite",
+                          accessor: "na",
                         },
 
                       ]}
